@@ -4,10 +4,6 @@
 
 ```shell
 $ npm install
-$ npm run main:start
-$ cd AppApple
-$ npm run start
-$ cd ../AppPear
 $ npm run start
 ```
 
