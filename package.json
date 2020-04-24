@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "main:start": "webpack-dev-server --config ./webpack.config.js --hot --mode development"
+    "main:start": "webpack-dev-server --config ./webpack.config.js --hot --mode development",
+    "start": "node ./bin/start.js & cd ./AppApple/ && node ./bin/start.js & cd ./AppPear/ && node ./bin/start.js"
   },
   "keywords": [
     "single-spa"
@@ -17,9 +18,10 @@
     "babel-loader": "^8.1.0",
     "history": "^4.10.1",
     "html-webpack-plugin": "^4.2.0",
-    "qiankun": "^2.0.2",
+    "qiankun": "^2.0.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "shelljs": "^0.8.3",
     "ts-loader": "^7.0.1"
   },
   "devDependencies": {

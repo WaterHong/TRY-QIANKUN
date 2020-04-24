@@ -1,22 +1,24 @@
 import * as React from "react";
 import { render } from "react-dom";
-import { createBrowserHistory } from "history";
-import "./Router.js"
+//import { createBrowserHistory } from "history";
+//import "./Router.js"
 
-const history = createBrowserHistory();
+//const history = createBrowserHistory();
 
 render(
     <div>
         <header>wx-uni</header>
-        <p onClick={()=>{
-            history.push("/app1");
-        }}>apple</p>
-        <p onClick={()=>{
-            history.push("/app2");
-        }}>pear</p>
+        <a onClick={()=>{
+            //history.push("/apple");
+            history.pushState(null, "/apple", "/apple");
+        }}>apple</a>
+        <br />
+        <a onClick={()=>{
+            //history.push("/pear");
+            history.pushState(null, "/pear", "/pear");
+        }}>pear</a>
 
         <section id="apps-container"></section>
-        <section id="apps2-container"></section>
     </div>,
     document.getElementById("main-container")
 );

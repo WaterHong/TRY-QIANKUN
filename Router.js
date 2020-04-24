@@ -1,4 +1,5 @@
 import { registerMicroApps, start } from 'qiankun';
+import "./index.tsx"
 
 registerMicroApps(
   [
@@ -6,13 +7,13 @@ registerMicroApps(
       name: 'AppApple', // app name registered
       entry: "//localhost:8881/",
       container: '#apps-container',
-      activeRule: '/app1',
+      activeRule: '/apple',
     },
     {
       name: 'AppPear',
       entry: '//localhost:8882/',
       container: '#apps-container',
-      activeRule: '/app2',
+      activeRule: '/pear',
     }
   ],
   {

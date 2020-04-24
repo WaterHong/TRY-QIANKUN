@@ -4,6 +4,7 @@
       "target": "es5",
       "resolveJsonModule": true,
       "experimentalDecorators": true,
+      "esModuleInterop": true,
       "jsx": "react",
       "baseUrl": "."
     }

@@ -1,12 +1,21 @@
 import * as React from "react";
 import ReactDOM, { render } from "react-dom";
+import './public-path';
 
-render(
-    <div>
-        Hi, apple
-    </div>,
-    document.getElementById("apple-container")
-);
+function RenderApple(props) {
+    const { container } = props;
+    render(
+        <div>
+            Hi, apple
+        </div>,
+        container ? container.querySelector('#apple-container') : document.querySelector('#apple-container')
+    )
+};
+
+if (!window.__POWERED_BY_QIANKUN__) {
+    console.log("koko");
+    RenderApple({});
+}
 
 export async function bootstrap() {
     console.log('[react16] react app bootstraped');
@@ -14,7 +23,7 @@ export async function bootstrap() {
 
 export async function mount(props) {
     console.log('[AppApple] props from main framework', props);
-    render(props);
+    RenderApple(props);
 }
 
 export async function unmount() {
